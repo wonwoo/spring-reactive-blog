@@ -59,8 +59,8 @@ public class DatabaseInitializer implements SmartInitializingSingleton {
             .thenMany(postRepository.deleteAll())
             .thenMany(this.userRepository.saveAll(Arrays.asList(user1, user2)))
             .thenMany(postRepository.saveAll(Arrays.asList(post1, post2, post3)))
-            .subscribe(null, null, () -> postRepository.findAll()
-                    .subscribe(System.out::println));
+            .thenMany(postRepository.findAll())
+                    .subscribe(System.out::println);
 
   }
 }
