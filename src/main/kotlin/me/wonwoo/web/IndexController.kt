@@ -8,7 +8,8 @@ import org.springframework.web.reactive.result.view.Rendering
 
 
 @Controller
-class IndexController(private val postRepository: PostRepository, private val markDownConverter: MarkDownConverter) {
+class IndexController(private val postRepository: PostRepository,
+                      private val markDownConverter: MarkDownConverter) {
 
   @GetMapping("/")
   fun home(): Rendering {

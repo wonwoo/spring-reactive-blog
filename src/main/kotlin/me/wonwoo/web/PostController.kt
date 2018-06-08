@@ -10,11 +10,11 @@ import org.springframework.web.reactive.result.view.Rendering
 @Controller
 class PostController(private val postRepository: PostRepository, private val markDownConverter: MarkDownConverter) {
 
-  @GetMapping("/{title}")
-  fun home(@PathVariable title: String): Rendering {
+  @GetMapping("/posts/{id}")
+  fun home(@PathVariable id: String): Rendering {
     return Rendering
         .view("post")
-        .modelAttribute("post", this.postRepository.findByTitle(title)
+        .modelAttribute("post", this.postRepository.findById(id)
             .map { it.toDto(markDownConverter) })
         .build()
   }
