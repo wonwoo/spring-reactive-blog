@@ -6,6 +6,6 @@ import reactor.core.publisher.Flux
 
 interface PostRepository : ReactiveMongoRepository<Post, ObjectId> {
 
-    fun findByTitle(title: String) : Flux<Post>
+    fun findByTitle(title: String): Flux<Post>
 
 }

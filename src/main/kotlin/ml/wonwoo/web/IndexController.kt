@@ -10,12 +10,12 @@ import org.springframework.web.reactive.result.view.Rendering
 class IndexController(private val postRepository: PostRepository,
                       private val markDownConverter: MarkDownConverter) {
 
-  @GetMapping("/")
-  fun home(): Rendering {
-    return Rendering
-        .view("index")
-        .modelAttribute("posts", this.postRepository.findAll()
-            .map { it.toDto(markDownConverter) })
-        .build()
-  }
+    @GetMapping("/")
+    fun home(): Rendering {
+        return Rendering
+            .view("index")
+            .modelAttribute("posts", this.postRepository.findAll()
+                .map { it.toDto(markDownConverter) })
+            .build()
+    }
 }
