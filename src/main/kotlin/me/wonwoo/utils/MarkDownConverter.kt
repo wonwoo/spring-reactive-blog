@@ -5,20 +5,25 @@ import org.commonmark.parser.Parser
 import org.commonmark.renderer.html.HtmlRenderer
 import org.springframework.stereotype.Service
 import org.springframework.util.StringUtils
-import java.util.*
 
 @Service
-class MarkDownConverter : (String?) -> String  {
+class MarkDownConverter : (String?) -> String {
 
-  private val parser = Parser.builder().extensions(Arrays.asList(AutolinkExtension.create())).build()
-  private val renderer = HtmlRenderer.builder().build()
+    private val parser = Parser.builder().extensions(listOf(AutolinkExtension.create())).build()
 
-  override fun invoke(input: String?): String {
+    private val renderer = HtmlRenderer.builder().build()
 
-    if(!StringUtils.hasText(input)) {
-      return "";
+    override fun invoke(input: String?): String {
+
+        if (!StringUtils.hasText(input)) {
+
+            return ""
+
+      
+        }
+      
+        return renderer.render(parser.parse(input))
+
     }
-    return renderer.render(parser.parse(input))
-  }
 
 }

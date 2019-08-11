@@ -17,7 +17,7 @@
     <div class="header">
       <div>
         <h1 class="brand-title">Spring blog</h1>
-        <h2 class="brand-tagline">Creating a blog using Spring Boot 2.0</h2>
+        <h2 class="brand-tagline">Creating a blog using Spring Boot 2.2</h2>
       </div>
 
     </div>
@@ -34,8 +34,8 @@
 
       <section class="post" >
         <header class="post-header">
-          <h2 class="post-title"><a data-th-href="@{|/${post.title}|}">[[${post.title}]]</a></h2>
-          <div class="post-meta">By <strong>[[${post.author.name}]]</strong>, on <strong>[[${post.addedAt}]]</strong></div>
+          <h2 class="post-title"><a data-th-href="@{|/${post.id}|}">[[${post.title}]]</a></h2>
+          <div class="post-meta">By <strong>[[${post.author}]]</strong>, on <strong>[[${post.addedAt}]]</strong></div>
         </header>
         <div class="post-description" th:utext="${post.content}">
         </div>
