@@ -1,4 +1,4 @@
-package me.wonwoo
+package ml.wonwoo
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

@@ -1,7 +1,7 @@
-package me.wonwoo.web
+package ml.wonwoo.web
 
-import me.wonwoo.domain.PostRepository
-import me.wonwoo.utils.MarkDownConverter
+import ml.wonwoo.domain.PostRepository
+import ml.wonwoo.utils.MarkDownConverter
 import org.bson.types.ObjectId
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping

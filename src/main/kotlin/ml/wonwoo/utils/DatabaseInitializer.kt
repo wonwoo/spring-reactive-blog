@@ -1,9 +1,9 @@
-package me.wonwoo.utils
+package ml.wonwoo.utils
 
-import me.wonwoo.domain.Post
-import me.wonwoo.domain.PostRepository
-import me.wonwoo.domain.User
-import me.wonwoo.domain.UserRepository
+import ml.wonwoo.domain.Post
+import ml.wonwoo.domain.PostRepository
+import ml.wonwoo.domain.User
+import ml.wonwoo.domain.UserRepository
 import org.springframework.beans.factory.SmartInitializingSingleton
 import org.springframework.stereotype.Component
 import java.time.LocalDateTime

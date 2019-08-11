@@ -1,4 +1,4 @@
-package me.wonwoo.utils
+package ml.wonwoo.utils
 
 import org.commonmark.ext.autolink.AutolinkExtension
 import org.commonmark.parser.Parser
