@@ -33,4 +33,4 @@ data class BlogDto(
 )
 
 
-fun Blog.toDto() = BlogDto(id, postTitle, postContent, formatToEnglish(postDate))
+fun Blog.toDto() = BlogDto(id, postTitle, postContent, postDate.formatToEnglish())

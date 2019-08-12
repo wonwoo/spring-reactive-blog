@@ -23,6 +23,6 @@ fun Post.toDto(markdownConverter: MarkDownConverter) = PostDto(
     id,
     title,
     markdownConverter(content),
-    formatToEnglish(regDate),
+    regDate.formatToEnglish(),
     author
 )

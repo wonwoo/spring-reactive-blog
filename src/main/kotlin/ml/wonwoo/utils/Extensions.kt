@@ -15,7 +15,7 @@ private val englishDateFormatter = DateTimeFormatterBuilder()
     .appendPattern("yyyy")
     .toFormatter(Locale.ENGLISH)
 
-fun formatToEnglish(temporal: TemporalAccessor): String = englishDateFormatter.format(temporal)
+fun TemporalAccessor.formatToEnglish(): String = englishDateFormatter.format(this)
 
 private fun getOrdinal(n: Int) = when {
 
