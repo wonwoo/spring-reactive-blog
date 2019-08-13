@@ -43,11 +43,11 @@ class DatabaseInitializer(private val postRepository: PostRepository,
             regDate = LocalDateTime.of(2019, 8, 25, 7, 16)
         )
 
-        userRepository.deleteAll()
-            .thenMany(postRepository.deleteAll())
+        this.userRepository.deleteAll()
+            .thenMany(this.postRepository.deleteAll())
             .thenMany(this.userRepository.saveAll(listOf(user1, user2)))
-            .thenMany(postRepository.saveAll(listOf(post1, post2, post3)))
-            .thenMany(postRepository.findAll())
+            .thenMany(this.postRepository.saveAll(listOf(post1, post2, post3)))
+            .thenMany(this.postRepository.findAll())
             .subscribe { println(it) }
     }
 

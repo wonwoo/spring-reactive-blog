@@ -10,7 +10,7 @@ class BlogClient(builder: WebClient.Builder, blogProperties: BlogProperties) {
 
     private val webClient = builder.baseUrl(blogProperties.url).build()
 
-    fun posts(): Mono<Content> = webClient
+    fun posts(): Mono<Content> = this.webClient
         .get()
         .uri("/api/posts")
         .retrieve()

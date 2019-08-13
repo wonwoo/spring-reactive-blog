@@ -19,10 +19,9 @@ class MarkDownConverter : (String?) -> String {
 
             return ""
 
-
         }
 
-        return renderer.render(parser.parse(input))
+        return this.renderer.render(this.parser.parse(input))
 
     }
 
