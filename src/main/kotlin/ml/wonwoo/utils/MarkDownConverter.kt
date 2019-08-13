@@ -12,14 +12,11 @@ class MarkDownConverter : (String?) -> String {
 
     private val renderer = HtmlRenderer.builder().build()
 
-    override fun invoke(input: String?): String {
+    override fun invoke(input: String?) = input?.let {
 
-        return input?.let {
+        this.renderer.render(this.parser.parse(it))
 
-            this.renderer.render(this.parser.parse(it))
+    } ?: ""
 
-        } ?: ""
-
-    }
 
 }
